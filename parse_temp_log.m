@@ -21,6 +21,10 @@ function [t T desc dt] = parse_temp_log(file)
         end
         tline = fgetl(fid);
     end
+    
+    c{1} = strrep(c{1}, sprintf('Description:\t'), '')
+    
+    
     desc = sprintf('%s\n',c{:})
   
     % Get temperatures
