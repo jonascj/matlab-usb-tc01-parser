@@ -31,14 +31,14 @@ function [fh slope] = plot_and_fit(file, figh)
     % Rectangular selection used for selecting fitting region
     rect = getrect(fh);
      
-    idx_low = floor( rect(1) / (2*s) ) + 1
+    idx_low = floor( rect(1) / (2*s) ) + 1;
     if idx_low <= 0
-        idx_low = 1
+        idx_low = 1;
     end
         
-    idx_high = idx_low + floor( rect(3) / (2*s) )
+    idx_high = idx_low + floor( rect(3) / (2*s) );
     if idx_high > max(t) / (2*s)
-        idx_high = max(t) / (2*s)
+        idx_high = max(t) / (2*s);
     end
     
     % Fit and plot fit
